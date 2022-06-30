@@ -7,7 +7,6 @@ RUN mvn package
 
 
 FROM tomcat:9.0.63-jre8-openjdk-slim-buster
-
 WORKDIR /usr/local/tomcat/webapps/
 COPY --from=0 /boxfuse-sample-java-war-hello/target/hello-1.0.war ./
 
